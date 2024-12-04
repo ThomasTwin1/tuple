@@ -1,0 +1,33 @@
+# A tuple is a list that does not change and uses parentheses
+
+dimensions = (200, 50)
+for dimension in dimensions:
+    print(dimension)
+# Output: 200
+#         50
+
+# You can change the value of dimensions by stating the same variable with different values
+dimensions = (100, 25)
+for dimension in dimensions:
+    print(dimension)
+# Output: 100
+#         25
+
+dimensions = ", ".join(map(str, (200, 50)))
+print(dimensions) #Output: 200, 50
+
+# You can not redefine the individual items in a tuple:
+dimensions = (200, 50)
+dimensions[0] = 20
+print(dimensions) # Output: TypeError: 'tuple' object does not support item assignment
+
+# Writing over a tuple
+dimensions = (200, 50)
+print("Original dimensions: " + ", ".join(map(str, dimensions))) # Output: Original dimensions: 200, 50
+dimensions = (100, 25)
+print("New dimensions: " + ", ".join(map(str, dimensions))) # Output: New dimensions: 100, 25
+
+# Adding join and map function on one line
+dimensions = ", ".join(map(str, (100,25)))
+print(dimensions)
+
